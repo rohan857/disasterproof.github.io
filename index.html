@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="DisasterProof AWS Cloud Disaster Recovery Control System"
+    >
+
+    <title>DisasterProof | AWS Recovery Control</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     AWS STYLE TOP BAR
+========================================================= -->
+
+<header class="topbar">
+
+    <div class="topbar-inner">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                DP
+            </div>
+
+            <div class="brand-copy">
+                <strong>DisasterProof</strong>
+                <span>Cloud Disaster Recovery</span>
+            </div>
+
+        </div>
+
+
+        <div class="topbar-status">
+
+            <div class="top-region">
+                <span class="orange-dot"></span>
+                <span>US East (N. Virginia)</span>
+            </div>
+
+            <div class="online-state">
+                <span class="online-dot"></span>
+                <strong>ONLINE</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     APP SHELL
+========================================================= -->
+
+<main class="app-shell">
+
+
+    <!-- =====================================================
+         COMPACT PAGE HEADER
+    ====================================================== -->
+
+    <section class="page-header">
+
+        <div>
+
+            <p class="eyebrow">
+                AWS CLOUD RESILIENCE
+            </p>
+
+            <h1>
+                Disaster Recovery Control Center
+            </h1>
+
+        </div>
+
+
+        <div class="header-mode">
+
+            <span>AWS</span>
+
+            <strong>
+                Cross-Region Recovery
+            </strong>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         SYSTEM STATUS
+    ====================================================== -->
+
+    <section
+        id="statusHero"
+        class="status-hero normal"
+    >
+
+        <div class="status-icon">
+            <span id="mainStatusIcon">✓</span>
+        </div>
+
+
+        <div class="status-copy">
+
+            <p class="eyebrow">
+                SYSTEM STATUS
+            </p>
+
+            <h2 id="mainStatusTitle">
+                Recovery Infrastructure Ready
+            </h2>
+
+            <p id="mainStatusDescription">
+                Primary and backup regions are ready.
+            </p>
+
+        </div>
+
+
+        <div class="status-metrics">
+
+            <div>
+                <span>PRIMARY</span>
+                <strong>Healthy</strong>
+            </div>
+
+            <div>
+                <span>BACKUP</span>
+                <strong>Standby</strong>
+            </div>
+
+            <div>
+                <span>MODE</span>
+                <strong>Manual</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MAIN DASHBOARD GRID
+    ====================================================== -->
+
+    <div class="dashboard-grid">
+
+
+        <!-- =================================================
+             OVERVIEW / ARCHITECTURE
+        ================================================== -->
+
+        <section
+            id="overviewPanel"
+            class="architecture-section mobile-panel active"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        RECOVERY ARCHITECTURE
+                    </p>
+
+                    <h2>
+                        Cross-Region Replication
+                    </h2>
+
+                </div>
+
+
+                <span class="live-pill">
+                    LIVE
+                </span>
+
+            </div>
+
+
+            <div class="region-grid">
+
+
+                <!-- =========================================
+                     PRIMARY REGION
+                ========================================== -->
+
+                <article
+                    id="primaryRegion"
+                    class="region-card primary-region"
+                >
+
+                    <div class="region-card-top">
+
+                        <div>
+
+                            <span class="region-label">
+                                PRIMARY REGION
+                            </span>
+
+                            <h3>US East</h3>
+
+                            <p>N. Virginia</p>
+
+                        </div>
+
+
+                        <span
+                            id="primaryBadge"
+                            class="state-badge active"
+                        >
+                            ACTIVE
+                        </span>
+
+                    </div>
+
+
+                    <div class="service-row">
+
+                        <div class="service-icon">
+                            S3
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Amazon S3
+                            </span>
+
+                            <strong>
+                                source-bucket-cc-project
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="region-footer">
+
+                        <span>
+                            Region
+                        </span>
+
+                        <code>
+                            us-east-1
+                        </code>
+
+                    </div>
+
+
+                    <div class="source-emitter">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </article>
+
+
+                <!-- =========================================
+                     RECOVERY PIPELINE
+                ========================================== -->
+
+                <div
+                    id="replicationTunnel"
+                    class="replication-tunnel"
+                >
+
+                    <div class="pipeline-title">
+
+                        <span>
+                            RECOVERY PIPELINE
+                        </span>
+
+                        <strong id="transferState">
+                            READY
+                        </strong>
+
+                    </div>
+
+
+                    <div class="tunnel-visual">
+
+                        <div class="tunnel-track"></div>
+
+                        <div
+                            id="transferTrail"
+                            class="transfer-trail"
+                        ></div>
+
+
+                        <div class="data-capsule capsule-1">
+                            01
+                        </div>
+
+                        <div class="data-capsule capsule-2">
+                            S3
+                        </div>
+
+                        <div class="data-capsule capsule-3">
+                            DR
+                        </div>
+
+                        <div class="data-capsule capsule-4">
+                            01
+                        </div>
+
+                        <div class="data-capsule capsule-5">
+                            S3
+                        </div>
+
+
+                        <div
+                            id="cloudNode"
+                            class="cloud-node"
+                        >
+
+                            <div class="cloud-icon">
+                                ☁
+                            </div>
+
+                            <span id="cloudNodeLabel">
+                                AWS
+                            </span>
+
+                        </div>
+
+
+                        <span class="pipeline-arrow">
+                            ›
+                        </span>
+
+                    </div>
+
+
+                    <div class="transfer-steps">
+
+                        <div
+                            id="stepDetect"
+                            class="transfer-step"
+                        >
+                            <span>1</span>
+                            Detect
+                        </div>
+
+
+                        <div
+                            id="stepReplicate"
+                            class="transfer-step"
+                        >
+                            <span>2</span>
+                            Replicate
+                        </div>
+
+
+                        <div
+                            id="stepVerify"
+                            class="transfer-step"
+                        >
+                            <span>3</span>
+                            Verify
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =========================================
+                     BACKUP REGION
+                ========================================== -->
+
+                <article
+                    id="backupRegion"
+                    class="region-card backup-region"
+                >
+
+                    <div class="region-card-top">
+
+                        <div>
+
+                            <span class="region-label">
+                                BACKUP REGION
+                            </span>
+
+                            <h3>US West</h3>
+
+                            <p>Oregon</p>
+
+                        </div>
+
+
+                        <span
+                            id="backupBadge"
+                            class="state-badge standby"
+                        >
+                            STANDBY
+                        </span>
+
+                    </div>
+
+
+                    <div class="service-row">
+
+                        <div class="service-icon">
+                            S3
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Amazon S3
+                            </span>
+
+                            <strong>
+                                backup-bucket-cc-project
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="region-footer">
+
+                        <span>
+                            Region
+                        </span>
+
+                        <code>
+                            us-west-2
+                        </code>
+
+                    </div>
+
+
+                    <div class="destination-receiver">
+                        <span></span>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SIDE COLUMN
+        ================================================== -->
+
+        <aside class="side-column">
+
+
+            <!-- =============================================
+                 RECOVERY PANEL
+            ============================================== -->
+
+            <section
+                id="recoveryPanel"
+                class="recovery-panel mobile-panel"
+            >
+
+                <div
+                    id="recoverySection"
+                    class="recovery-section"
+                >
+
+                    <div class="recovery-heading">
+
+                        <div class="warning-circle">
+                            !
+                        </div>
+
+
+                        <div>
+
+                            <p class="eyebrow orange">
+                                EMERGENCY CONTROL
+                            </p>
+
+                            <h2>
+                                Disaster Recovery
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="recovery-description">
+
+                        Replicate critical recovery data
+                        from US East to US West.
+
+                    </p>
+
+
+                    <button
+                        id="activateButton"
+                        class="activate-button"
+                        type="button"
+                    >
+
+                        <span class="button-icon">
+                            ↻
+                        </span>
+
+                        <span>
+
+                            <strong>
+                                ACTIVATE RECOVERY
+                            </strong>
+
+                            <small>
+                                Start AWS replication
+                            </small>
+
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =========================================
+                     RESULT
+                ========================================== -->
+
+                <div
+                    id="resultPanel"
+                    class="result-panel hidden"
+                >
+
+                    <div class="result-header">
+
+                        <div class="result-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <span>
+                                LAST RECOVERY
+                            </span>
+
+                            <strong>
+                                Protected
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="result-row">
+
+                        <span>
+                            Object
+                        </span>
+
+                        <strong id="resultFilename">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-row">
+
+                        <span>
+                            Duration
+                        </span>
+
+                        <strong id="resultDuration">
+                            -
+                        </strong>
+
+                    </div>
+
+
+                    <div class="result-row">
+
+                        <span>
+                            Status
+                        </span>
+
+                        <strong id="resultStatus">
+                            Protected
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =============================================
+                 ACTIVITY PANEL
+            ============================================== -->
+
+            <section
+                id="activityPanel"
+                class="activity-section mobile-panel"
+            >
+
+                <div class="activity-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            ACTIVITY
+                        </p>
+
+                        <h2>
+                            Recovery Events
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        id="clearLogButton"
+                        class="clear-button"
+                        type="button"
+                    >
+                        Clear
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="eventLog"
+                    class="event-log"
+                >
+
+                    <div class="event-item success">
+
+                        <div class="event-marker">
+                            ✓
+                        </div>
+
+
+                        <div class="event-content">
+
+                            <strong>
+                                System initialized
+                            </strong>
+
+                            <p>
+                                Recovery controls are ready.
+                            </p>
+
+                        </div>
+
+
+                        <time>
+                            READY
+                        </time>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </aside>
+
+    </div>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="desktop-footer">
+
+        <span>
+            DisasterProof Replication Confirmator
+        </span>
+
+        <span>
+            AWS Cloud Computing Project
+        </span>
+
+    </footer>
+
+
+    <!-- =====================================================
+         MOBILE NAVIGATION
+    ====================================================== -->
+
+    <nav class="mobile-nav">
+
+        <button
+            class="mobile-nav-button active"
+            data-panel="overviewPanel"
+            type="button"
+        >
+
+            <span>☁</span>
+            Overview
+
+        </button>
+
+
+        <button
+            class="mobile-nav-button"
+            data-panel="recoveryPanel"
+            type="button"
+        >
+
+            <span>↻</span>
+            Recovery
+
+        </button>
+
+
+        <button
+            class="mobile-nav-button"
+            data-panel="activityPanel"
+            type="button"
+        >
+
+            <span>≡</span>
+            Activity
+
+        </button>
+
+    </nav>
+
+</main>
+
+
+<!-- =========================================================
+     CONFIRMATION MODAL
+========================================================= -->
+
+<div
+    id="confirmationModal"
+    class="modal"
+    aria-hidden="true"
+>
+
+    <div class="modal-backdrop"></div>
+
+
+    <div class="modal-card">
+
+        <div class="modal-alert">
+            !
+        </div>
+
+
+        <p class="eyebrow orange">
+            CONFIRM ACTION
+        </p>
+
+
+        <h2>
+            Start Disaster Recovery?
+        </h2>
+
+
+        <p class="modal-description">
+
+            AWS will invoke the recovery Lambda and
+            replicate data to the backup region.
+
+        </p>
+
+
+        <div class="modal-route">
+
+            <div>
+
+                <span>SOURCE</span>
+
+                <strong>
+                    us-east-1
+                </strong>
+
+                <small>
+                    source-bucket-cc-project
+                </small>
+
+            </div>
+
+
+            <div class="route-arrow">
+                →
+            </div>
+
+
+            <div>
+
+                <span>BACKUP</span>
+
+                <strong>
+                    us-west-2
+                </strong>
+
+                <small>
+                    backup-bucket-cc-project
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <div class="modal-actions">
+
+            <button
+                id="cancelButton"
+                class="secondary-button"
+                type="button"
+            >
+                Cancel
+            </button>
+
+
+            <button
+                id="confirmButton"
+                class="confirm-button"
+                type="button"
+            >
+                Confirm Recovery
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="./js/config.js"></script>
+<script src="./js/api.js"></script>
+<script src="./js/app.js"></script>
+
+</body>
+</html>
