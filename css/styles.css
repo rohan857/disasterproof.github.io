@@ -85,6 +85,53 @@ button {
 
 
 /* =========================================================
+   SPLASH SCREEN
+========================================================= */
+
+.brand-splash {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+
+    background: #000000;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        opacity 0.4s ease,
+        visibility 0.4s ease;
+}
+
+
+.brand-splash.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+.brand-splash picture,
+.brand-splash img {
+    display: block;
+    width: 100vw;
+    height: auto;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+    .brand-splash {
+        transition-duration: 0.01ms;
+    }
+}
+
+
+/* =========================================================
    TOP BAR
 ========================================================= */
 

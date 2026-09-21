@@ -1017,3 +1017,36 @@ document.addEventListener(
 ========================================================= */
 
 resetRecoveryState();
+
+
+/* =========================================================
+   SPLASH SCREEN
+========================================================= */
+
+window.addEventListener(
+    "load",
+    () => {
+
+        window.setTimeout(
+            () => {
+
+                const brandSplash =
+                    document.getElementById(
+                        "brandSplash"
+                    );
+
+
+                if (brandSplash) {
+
+                    brandSplash.classList.add(
+                        "hidden"
+                    );
+
+                }
+
+            },
+            1050
+        );
+
+    }
+);
